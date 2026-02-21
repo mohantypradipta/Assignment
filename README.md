@@ -21,7 +21,7 @@ Kry-Assignment/
 - **Responsive Design** - Mobile-first approach
 
 ### Backend
-- **Spring Boot 3.2** - REST API framework
+- **Spring Boot 3.5** - REST API framework
 - **Java 17** - Programming language
 - **Maven** - Build tool
 - **JUnit** - Unit testing
