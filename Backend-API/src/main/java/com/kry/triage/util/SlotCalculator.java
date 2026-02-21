@@ -20,7 +20,6 @@ public class SlotCalculator {
     private static final int CLINICIANS_COUNT = 4;
     private static final int HOURS_PER_DAY = 8;
     private static final int BREAK_AFTER_HOURS = 4;
-    private static final int BREAK_DURATION_MINUTES = 60;
     private static final int SLOT_DURATION_MINUTES = 15;
     private static final int CLINIC_START_HOUR = 8;
     private static final int CLINIC_END_HOUR = 18;
