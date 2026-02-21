@@ -1,0 +1,27 @@
+{
+  "name": "medical-triage-app",
+  "version": "1.0.0",
+  "description": "Medical triage and booking application",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "axios": "^1.6.2",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/node": "^20.10.5",
+    "vite": "^5.0.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "sass": "^1.69.5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  }
+}

@@ -1,0 +1,149 @@
+.confirmation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.confirmation-icon {
+  font-size: 4rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+  animation: bounce 0.5s ease-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0) rotate(-90deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.confirmation-title {
+  font-size: 2rem;
+  color: #212529;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.confirmation-details {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.detail-value {
+  color: #212529;
+  font-weight: 500;
+  text-align: right;
+}
+
+.back-button {
+  padding: 1rem 2rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 1.5rem;
+  }
+
+  .confirmation-icon {
+    font-size: 3rem;
+  }
+
+  .confirmation-title {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-details {
+    padding: 1.5rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-value {
+    text-align: left;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-card {
+    padding: 1rem;
+  }
+
+  .confirmation-icon {
+    font-size: 2.5rem;
+  }
+
+  .confirmation-title {
+    font-size: 1.25rem;
+  }
+
+  .confirmation-details {
+    padding: 1rem;
+  }
+
+  .detail-label {
+    font-size: 0.9rem;
+  }
+
+  .detail-value {
+    font-size: 0.9rem;
+  }
+}

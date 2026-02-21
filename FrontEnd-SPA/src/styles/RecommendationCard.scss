@@ -1,0 +1,107 @@
+.recommendation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #0066cc;
+  animation: slideIn 0.3s ease-out;
+
+  &.recommendation-chat {
+    border-left-color: #17a2b8;
+  }
+
+  &.recommendation-nurse {
+    border-left-color: #ffc107;
+  }
+
+  &.recommendation-doctor {
+    border-left-color: #dc3545;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.recommendation-title {
+  font-size: 1.8rem;
+  color: #212529;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.score-badge {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #0066cc;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.recommendation-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .recommendation-card {
+    padding: 1.5rem;
+  }
+
+  .recommendation-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recommendation-title {
+    font-size: 1.4rem;
+  }
+
+  .score-badge {
+    align-self: flex-start;
+  }
+
+  .recommendation-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendation-card {
+    padding: 1rem;
+    border-left-width: 4px;
+  }
+
+  .recommendation-title {
+    font-size: 1.1rem;
+  }
+
+  .score-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .recommendation-description {
+    font-size: 0.9rem;
+  }
+}
