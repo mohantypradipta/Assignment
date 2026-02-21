@@ -37,11 +37,10 @@ public class SlotCalculator {
     public static List<String> calculateAvailableSlots() {
         List<String> availableSlots = new ArrayList<>();
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime currentTime = now;
 
         // Generate slots for next 3 calendar days
         for (int dayOffset = 0; dayOffset < DAYS_TO_SHOW; dayOffset++) {
-            LocalDateTime dayStart = currentTime.toLocalDate()
+            LocalDateTime dayStart = now.toLocalDate()
                     .atStartOfDay()
                     .plusDays(dayOffset)
                     .withHour(CLINIC_START_HOUR);
