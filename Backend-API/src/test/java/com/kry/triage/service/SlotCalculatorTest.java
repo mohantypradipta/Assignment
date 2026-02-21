@@ -1,8 +1,9 @@
-package com.kry.triage.util;
+package com.kry.triage.service;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.kry.triage.util.SlotCalculator;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -48,12 +49,12 @@ public class SlotCalculatorTest {
     public void testSlotsWithin3Days() {
         List<String> slots = SlotCalculator.calculateAvailableSlots();
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime threeOutDays = now.plusDays(3);
+        LocalDateTime thirdDayEnd = now.toLocalDate().plusDays(3).atStartOfDay();
         
-        // All slots should be within 3 days
+        // All slots should be within 3 days (today + 2 more days)
         for (String slot : slots) {
             LocalDateTime slotTime = LocalDateTime.parse(slot);
-            assertTrue(slotTime.isBefore(threeOutDays) || slotTime.isEqual(threeOutDays),
+            assertTrue(slotTime.isBefore(thirdDayEnd),
                 "Slot " + slot + " should be within 3 days");
         }
     }
